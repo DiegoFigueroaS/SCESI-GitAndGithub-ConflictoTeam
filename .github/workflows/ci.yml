@@ -1,4 +1,4 @@
-name: Java CI + Commit Lint
+name: Java CI
 
 on:
   push:
@@ -14,6 +14,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Validate branch name
+        run: |
+          echo "Checking branch name..."
+          BRANCH_NAME="${GITHUB_REF##*/}"
+          echo "Current branch: $BRANCH_NAME"
+          if [[ ! "$BRANCH_NAME" =~ ^(feature|bugfix|hotfix)/[0-9]+/[a-z0-9\-]+$ && ! "$BRANCH_NAME" =~ ^(release)/[0-9]+\.[0-9]+\.[0-9]+$ && ! "$BRANCH_NAME" =~ ^(develop|main)$ ]]; then
+            echo "❌ Invalid branch name: $BRANCH_NAME"
+            echo "Branch must follow: feature/01/title-example or bugfix/01/fix-example"
+            exit 1
+          fi
+          echo "✅ Branch name is valid!"
 
       - name: Validate commits with commitlint
         uses: wagoid/commitlint-github-action@v5
