@@ -1,0 +1,47 @@
+@startuml
+package "User Interface" {
+  class Main {
+    +main(String[] args)
+  }
+}
+
+package "Controller" {
+  class CalculatorController {
+    +start()
+  }
+}
+
+package "Service" {
+  interface OperationStrategy {
+    +double execute(double a, double b)
+  }
+
+  class CalculatorService {
+    +executeOperation(OperationStrategy, double a, double b) : double
+  }
+
+  class SumOperation implements OperationStrategy {
+    +execute(a, b) : double
+  }
+
+  class SubtractOperation implements OperationStrategy {
+    +execute(a, b) : double
+  }
+
+  class MultiplyOperation implements OperationStrategy {
+    +execute(a, b) : double
+  }
+
+  class DivideOperation implements OperationStrategy {
+    +execute(a, b) : double
+  }
+}
+
+Main --> CalculatorController
+CalculatorController --> CalculatorService
+CalculatorService --> OperationStrategy
+SumOperation --|> OperationStrategy
+SubtractOperation --|> OperationStrategy
+MultiplyOperation --|> OperationStrategy
+DivideOperation --|> OperationStrategy
+@enduml
