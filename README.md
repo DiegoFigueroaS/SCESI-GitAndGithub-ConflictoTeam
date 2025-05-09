@@ -69,7 +69,7 @@ Se sigue un flujo **Gitflow profesional**:
 - Pull Requests con template obligatorio
 - Uso del tablero Trello para visualizar el ciclo de vida de cada historia (ver Wiki)
 
-📷 Template de Pull Request:
+Template de Pull Request:
 ![PR Template](assets/pr_template.png)
 
 ---
