@@ -1,6 +1,5 @@
 package org.example.Services;
 
 public interface OperationStrategy {
-    double exec(double a, double b);
-
+    double execute(double a, double b);
 }
