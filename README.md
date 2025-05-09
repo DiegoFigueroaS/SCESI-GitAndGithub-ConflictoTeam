@@ -60,7 +60,7 @@ Se configuraron reglas en GitHub para asegurar calidad y orden en los merges:
 
 - No se puede hacer merge si el CI falla.
 
-## 📋 Flujo de trabajo
+## Flujo de trabajo
 
 Se sigue un flujo **Gitflow profesional**:
 
@@ -70,7 +70,7 @@ Se sigue un flujo **Gitflow profesional**:
 - Uso del tablero Trello para visualizar el ciclo de vida de cada historia (ver Wiki)
 
 Template de Pull Request:
-![PR Template](assets/pr_template.png)
+  ![PR Template](assets/pr_template.png)
 
 ---
 
@@ -80,7 +80,7 @@ Durante el desarrollo se produjo un **conflicto** al mergear una rama.
 Este conflicto fue **detectado a tiempo, solucionado y resuelto correctamente antes del merge final**.
 
 Imagen del conflicto detectado:
-![Conflicto detectado](assets/conflicts.png)
+  ![Conflicto detectado](assets/conflicts.png)
 
 ---
 
