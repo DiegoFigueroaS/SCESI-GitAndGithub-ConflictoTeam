@@ -12,7 +12,7 @@
 
 ## ¡Revisar la Wiki antes de todo!
 
-Toda la documentación detallada del proyecto (arquitectura, CI, flujo de ramas, templates, DoD/DoR, etc.) se encuentra disponible en la **[Wiki del repositorio](./wiki)**.
+Toda la documentación detallada del proyecto (arquitectura, CI, flujo de ramas, templates, DoD/DoR, etc.) se encuentra disponible en la WIKI.
 
 ---
 
@@ -26,9 +26,9 @@ Este proyecto consiste en una **calculadora simple en Java por consola**, pero i
 
 Se configuró un flujo de CI con **GitHub Actions** que realiza:
 
-✅ Validación del nombre del **branch**  
-✅ Validación de los **mensajes de commit** (`commitlint`)  
-✅ Validación de **estructura del proyecto (build Maven)**
+- Validación del nombre del **branch**  
+- Validación de los **mensajes de commit** (`commitlint`)  
+- Validación de **estructura del proyecto (build Maven)**
 
 ### Validación del nombre del branch
 Se asegura que las ramas cumplan el formato `feature/xx/descripcion`, `bugfix/xx/descripcion`, etc.  
@@ -60,23 +60,17 @@ Se configuraron reglas en GitHub para asegurar calidad y orden en los merges:
 
 - No se puede hacer merge si el CI falla.
 
----
-
-## Arquitectura del Sistema
-
-Se diseñó una arquitectura basada en buenas prácticas y principios **SOLID**, aplicando el patrón **Strategy** para las operaciones.  
-El diagrama se encuentra en el archivo `docs/diagrams/calculator-architecture.puml`.
-
----
-
-## Flujo de trabajo
+## 📋 Flujo de trabajo
 
 Se sigue un flujo **Gitflow profesional**:
 
 - Ramas: `main`, `develop`, `feature/xx/desc`, `bugfix/xx/desc`, `hotfix/xx/desc`
 - Validaciones automáticas mediante CI
-- Pull Requests con [template obligatorio](./.github/PULL_REQUEST_TEMPLATE.md)
+- Pull Requests con template obligatorio
 - Uso del tablero Trello para visualizar el ciclo de vida de cada historia (ver Wiki)
+
+📷 Template de Pull Request:
+![PR Template](assets/pr_template.png)
 
 ---
 
